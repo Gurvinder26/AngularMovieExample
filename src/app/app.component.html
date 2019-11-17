@@ -1,13 +1,17 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" routerLink="/">Movie Angular Example </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+  <a class="navbar-brand" [routerLink]="'/'">Movie Angular Example</a>
+
+  <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+    &#9776;
   </button>
-  <div class="collapse navbar-collapse" id="menu" [ngClass]="{ 'visible': showLinks }">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" [routerLink]="currentUrl">Profile</a>
-    </div>
+
+  <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="currentUrl" (click)="isMenuCollapsed = true">Profile</a>
+      </li>
+    </ul>
   </div>
 </nav>
 <router-outlet></router-outlet>

@@ -3,6 +3,8 @@
 <input class="form-control ml-2 mb-2" id="movie-id" [formControl]="movieId" type="text" placeholder="For Example: tt3896198">
 <button [disabled]="!movieId.valid"  class="btn btn-primary m-2"  (click)="getMovie(movieId.value)">Get Movie</button>
 
+
+<!-- Display list of searched movies with id -->
 <table  class="table table-striped">
     <thead>
     <tr>

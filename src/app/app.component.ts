@@ -10,7 +10,7 @@ const moment = _moment;
 })
 export class AppComponent {
   public title: string = "angularMovieExample";
-  public showLinks: boolean = false;
+  public isMenuCollapsed: boolean = false;
   public dateFormat: string = "MMM DD, YYYY, HH:mm:ss A ";
 
   /**
